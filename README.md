@@ -30,10 +30,13 @@
 
 # Домашнее задание к занятию «2.4. Инструменты Git»
 
-### 1)   aefead2207ef7e2aa5dc81a34aedf0cad4c32545
-### 2)   85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23)
-### 3)   2 родителя с хешами : 56cd7859e 9ea88f22f
-### 4)   
+### 1)   git show aefea
+### commit aefead2207ef7e2aa5dc81a34aedf0cad4c32545
+### 2)   $ git show 85024
+### commit 85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23)
+### 3)   $ git show --pretty=format:' %P' b8d720 : 56cd7859e05c36c06b56d013b55a252d0bb7e158 9ea88f22fc6269854151c571162c5bcf958bee2b
+
+### 4)   $ git log  v0.12.23..v0.12.24  --oneline
    #### 1.b14b74c49 [Website] vmc provider links
    #### 2.3f235065b Update CHANGELOG.md
    #### 3.6ae64e247 registry: Fix panic when server is unreachable
@@ -43,9 +46,17 @@
    #### 7.4b6d06cc5 Update CHANGELOG.md
    #### 8.dd01a3507 Update CHANGELOG.md
    #### 9.225466bc3 Cleanup after v0.12.23 release
-### 5)   commit 8c928e83589d90a031f811fae52a81be7153e82f
-### 6)   35a058fb3ddfae9cfee0b3893822c9a95b920f4c, c0b17610965450a89598da491ce9b6b5cbd6393f, 8364383c359a6b738a436d1b7745ccdce178df47
-### 7)   Martin Atkins
+### 5)   git log -S'func providerSource' --oneline
+### 5af1e6234 main: Honor explicit provider_installation CLI config when present
+### 8c928e835 main: Consult local directories as potential mirrors of providers
+
+
+### 6)   git grep 'func globalPluginDirs'
+### plugins.go:func globalPluginDirs() []string {
+### git log -L :'func globalPluginDirs':plugins.go --oneline
+### 7)  git log -S'func synchronizedWriters' --pretty=format:'%h - %an %ae'
+### 5ac311e2a - Martin Atkins mart@degeneration.co.uk
+
 
 
 ## Будут проигнорированны файлы :
