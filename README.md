@@ -1,5 +1,44 @@
 # devops-netology_Dmitriy-Kaleda
 
+## Домашнее задание к занятию "3.3. Операционные системы, лекция 1"
+    
+
+### 1) системный вызов команды CD -> chdir("/tmp") в нашем случае. 
+### 2)  Файл базы типов - /usr/share/misc/magic.mgc
+### в тексте это: openat(AT_FDCWD, "/usr/share/misc/magic.mgc", O_RDONLY) = 3
+### 3)  vagrant@vagrant:~$ lsof -p 1126
+...
+vi      1126 vagrant    4u   REG  253,0    12288  526898 /home/vagrant/.tst_bash.swp (deleted)
+### vagrant@vagrant:~$ echo '' >/proc/1126/fd/4
+где 1126 - PID процесса vi
+4 - дескриптор файла , который предварительно удалил. 
+### 4) "Зомби" процессы, в отличии от "сирот" освобождают свои ресурсы, но не освобождают запись в таблице процессов. 
+### запись освободиться при вызове wait() родительским процессом.
+### 5) vagrant@vagrant:~sudo -i
+### root@vagrant:~# dpkg -L bpfcc-tools | grep sbin/opensnoop
+### /usr/sbin/opensnoop-bpfcc
+### root@vagrant:~# /usr/sbin/opensnoop-bpfcc
+PID    COMM               FD ERR PATH
+766    vminfo              6   0 /var/run/utmp
+562    dbus-daemon        -1   2 /usr/local/share/dbus-1/system-services
+562    dbus-daemon        18   0 /usr/share/dbus-1/system-services
+562    dbus-daemon        -1   2 /lib/dbus-1/system-services
+562    dbus-daemon        18   0 /var/lib/snapd/dbus-1/system-services/
+### 7) системный вызов uname()
+Цитата :
+     Part of the utsname information is also accessible  via  /proc/sys/ker‐
+       nel/{ostype, hostname, osrelease, version, domainname}.
+### 8)
+&& -  условный оператор, 
+а ;  - разделитель последовательных команд
+
+set -e - прерывает сессию при любом ненулевом значении исполняемых команд в конвеере кроме последней.
+в случае &&  вместе с set -e- вероятно не имеет смысла, так как при ошибке , выполнение команд прекратиться. 
+### 9)
+Самые частые:
+S*(S,S+,Ss,Ssl,Ss+) - Процессы ожидающие завершения (спящие с прерыванием "сна")
+I*(I,I<) - фоновые(бездействующие) процессы ядра
+
 ##Домашнее задание к занятию "3.2. Работа в терминале, лекция 2"
 ### 1) Это команда встройенная.
 ### Встроенная, потому что, работать внутри сессии терминала логичнее менять указатель на текущую дерикторию внутренней функцией, 
