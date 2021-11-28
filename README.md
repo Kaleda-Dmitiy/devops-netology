@@ -1,6 +1,82 @@
 # devops-netology_Dmitriy-Kaleda
 
+## Домашнее задание к занятию "3.6. Компьютерные сети, лекция 1"
+### 1)
+HTTP/1.1 301 Moved Permanently
+cache-control: no-cache, no-store, must-revalidate
+location: https://stackoverflow.com/questions
+x-request-guid: c5b3380e-d88d-4645-b897-3c62e95e670e
+feature-policy: microphone 'none'; speaker 'none'
+content-security-policy: upgrade-insecure-requests; frame-ancestors 'self' https://stackexchange.com
+Accept-Ranges: bytes
+Date: Sun, 28 Nov 2021 08:57:05 GMT
+Via: 1.1 varnish
+Connection: close
+X-Served-By: cache-hhn4028-HHN
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1638089826.527000,VS0,VE184
+Vary: Fastly-SSL
+X-DNS-Prefetch-Control: off
+Set-Cookie: prov=d05f6af6-dbbc-91f8-7072-bce9cd5aa692; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly
 
+1. те разрешения для сайта которые имеються
+2. данные о времнеи получения
+### 2) 
+https://ibb.co/SNPLTn4
+### 3) 
+77.222.121.62
+### 4)
+ 1. Intersvyaz
+ 2. AS8369
+### 5)
+ vagrant@vagrant:~$ traceroute 8.8.8.8
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
+ 1  _gateway (10.0.2.2)  0.155 ms  0.122 ms  0.114 ms
+ 2  * * *
+ 3  * * *
+### 6)
+vagrant@vagrant:~$ mtr 8.8.8.8
+
+                                               My traceroute  [v0.93]
+vagrant (10.0.2.15)                                                                            2021-11-28T09:22:34+0000
+Keys:  Help   Display mode   Restart statistics   Order of fields   quit
+                                                                               Packets               Pings
+ Host                                                                        Loss%   Snt   Last   Avg  Best  Wrst StDev
+ 1. _gateway                                                                  0.0%     7    0.2   0.2   0.1   0.2   0.0
+ 2. ip-192-168-27-1.is74.loc                                                  0.0%     7    0.7   0.7   0.5   0.9   0.1
+ 3. 172.24.128.1                                                              0.0%     7    1.8   7.3   1.2  40.6  14.7
+ 4. 10.100.120.5                                                              0.0%     7    4.9   5.3   4.1   9.4   1.8
+ 5. 10.100.120.6                                                              0.0%     7    5.3   5.2   4.9   5.5   0.3
+ 6. 10.100.124.146                                                            0.0%     7    4.9   4.8   4.2   5.1   0.3
+ 7. 10.100.124.161                                                            0.0%     7    4.3   4.6   4.0   5.5   0.5
+ 8. msk-ix-gw1.google.com                                                     0.0%     7   31.4  30.9  30.4  31.5   0.5
+ 9. 108.170.250.51                                                           28.6%     7   33.2  32.9  32.0  33.3   0.6
+ 10. 142.251.49.158                                                           50.0%     7   68.5  52.0  43.7  68.5  14.3
+ 11. 108.170.235.204                                                           0.0%     7   48.4  49.3  48.0  51.7   1.2
+ 12. 216.239.42.23                                                             0.0%     7   47.5  48.6  46.2  59.2   4.7
+ 13. (waiting for reply)
+ 14. (waiting for reply)
+ 15. (waiting for reply)
+ 16. (waiting for reply)
+ 17. (waiting for reply)
+ 18. (waiting for reply)
+ 19. (waiting for reply)
+ 20. (waiting for reply)
+ 21. (waiting for reply)
+ 22. dns.google                                                               16.7%     6   45.0  46.9  44.9  48.5   1.8
+### 7)
+  vagrant@vagrant:~$ dig dns.google
+
+;; QUESTION SECTION:
+;dns.google.                    IN      A
+
+;; ANSWER SECTION:
+dns.google.             874     IN      A       8.8.4.4
+dns.google.             874     IN      A       8.8.8.8
+### 8) 
+4.4.8.8.in-addr.arpa    IN PTR    dns.google
+8.8.8.8.in-addr.arpa    IN PTR    dns.google
 ## Домашнее задание к занятию "3.5. Файловые системы"
 
 ## 1)   Изучил. Хорошее решение для использования в Торрентах.
