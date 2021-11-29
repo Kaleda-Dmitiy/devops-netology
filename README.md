@@ -1,5 +1,105 @@
 # devops-netology_Dmitriy-Kaleda
 
+##Домашнее задание к занятию "3.7. Компьютерные сети, лекция 2"
+
+### 1) ipconfig
+### 2) NDP (Neighbor Discovery Protocol)- протокол из набора протоколов TCP/IP
+## пакеты iproute или iproute2 команда ip
+## 3) VLAN
+vlan с ID-100 для интерфейса eth0 with ID - 100 в Debian/Ubuntu Linux##
+auto eth0.100
+iface eth0.100 inet static
+address 192.168.1.200
+netmask 255.255.255.0
+vlan-raw-device eth0
+## 4)
+Linux поддерживает несколько режимов агрегации интерфейсов:
+
+0 (balance-rr) — round-robin распределение пакетов между интерфейсами. Обеспечивает отказоустойчивость и повышение пропускной способности.
+1 (active-backup) — в каждый момент времени работает только один интерфейс, в случае его выхода из строя, mac-адрес назначается второму интерфейсу и трафик переключается на него.
+2 (balance-xor) — обеспечивает балансировку между интерфейсами на основании MAC-адресов отправителя и получателя.
+3 (broadcast) — отправляет пакеты через все интерфейсы одновременно, обеспечивает отказоустойчивость.
+4 (802.3ad) — обеспечивает агрегацию на основании протокола 802.3ad.
+5 (balance-tlb) — в этом режиме входящий трафик приходит только на один «активный» интерфейс, исходящий же распределяется по всем интерфейсам.
+6 (balance-alb) — балансирует исходящий трафик как tlb, а так же входящий IPv4 трафик используя ARP.
+
+Установим ifenslave:
+
+root@localhost:~$ apt-get install ifenslave-2.6
+конфиг /etc/network/interfaces примерно к такому виду:
+auto bond0
+iface bond0 inet static
+        address 192.168.0.2
+        netmask 255.255.255.0
+        network 192.168.0.0
+        broadcast 192.168.0.255
+        gateway 192.168.0.1
+        up /sbin/ifenslave bond0 eth0 eth1
+        down /sbin/ifenslave -d bond0 eth0 eth1
+Создаем файл /etc/modprobe.d/bonding.conf:
+
+alias bond0 bonding
+options bonding mode=0 miimon=100 downdelay=200 updelay=200
+Добавляем модуль bonding в /etc/modules:
+
+root@localhost:~$ echo "bonding" >> /etc/modules
+
+## 5)
+1. 8
+2. 32
+=>
+Network:   10.10.10.0/24
+HostMin:   10.10.10.1
+HostMax:   10.10.10.254
+Broadcast: 10.10.10.255
+Hosts/Net: 254                   Class A, Private Internet
+
+1 Requested size: 6 hosts
+Netmask:   255.255.255.248 = 29
+Network:   10.10.10.0/29
+HostMin:   10.10.10.1
+HostMax:   10.10.10.6
+Broadcast: 10.10.10.7
+Hosts/Net: 6                     Class A, Private Internet
+
+2 Requested size: 6 hosts
+Netmask:   255.255.255.248 = 29
+Network:   10.10.10.8/29
+HostMin:   10.10.10.9
+HostMax:   10.10.10.14
+Broadcast: 10.10.10.15
+Hosts/Net: 6                     Class A, Private Internet
+
+3 Requested size: 6 hosts
+Netmask:   255.255.255.248 = 29
+Network:   10.10.10.16/29
+HostMin:   10.10.10.17
+HostMax:   10.10.10.22
+Broadcast: 10.10.10.23
+Hosts/Net: 6                     Class A, Private Internet
+
+4 Requested size: 6 hosts
+Netmask:   255.255.255.248 = 29
+Network:   10.10.10.24/29
+HostMin:   10.10.10.25
+HostMax:   10.10.10.30
+Broadcast: 10.10.10.31
+Hosts/Net: 6                     Class A, Private Internet
+...
+32 Requested size: 6 hosts
+Netmask:   255.255.255.248 = 29
+Network:   10.10.10.248/29
+HostMin:   10.10.10.249
+HostMax:   10.10.10.254
+Broadcast: 10.10.10.255
+Hosts/Net: 6                     Class A, Private Internet
+
+
+### 6) 172.32.0.0/26
+### 7) 
+1. sudo arp-scan --interface=eth0 --localnet
+2. ip -s -s neigh flush all
+3. arp -d [ip Адрес]
 ## Домашнее задание к занятию "3.6. Компьютерные сети, лекция 1"
 ### 1)
 vagrant@vagrant:~$ telnet stackoverflow.com 80
