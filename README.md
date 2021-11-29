@@ -103,7 +103,7 @@ Broadcast: 10.10.10.255
 Hosts/Net: 6                     Class A, Private Internet
 
 
-### 6) 193.168.0.0/26
+### 6) 193.168.0.0/26 
 ### 7) 
 1. sudo arp-scan --interface=eth0 --localnet
 2. ip -s -s neigh flush all
