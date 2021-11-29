@@ -10,7 +10,7 @@
 
 ## Домашнее задание к занятию "3.7. Компьютерные сети, лекция 2"
 
-### 1) ipconfig
+### 1) ipconfig(windows) ip link(linux)
 ### 2) NDP (Neighbor Discovery Protocol)- протокол из набора протоколов TCP/IP
 ## пакеты iproute или iproute2 команда ip
 ## 3) VLAN
@@ -103,7 +103,7 @@ Broadcast: 10.10.10.255
 Hosts/Net: 6                     Class A, Private Internet
 
 
-### 6) 172.32.0.0/26
+### 6) 193.168.0.0/26
 ### 7) 
 1. sudo arp-scan --interface=eth0 --localnet
 2. ip -s -s neigh flush all
