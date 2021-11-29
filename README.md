@@ -2,27 +2,20 @@
 
 ## Домашнее задание к занятию "3.6. Компьютерные сети, лекция 1"
 ### 1)
-HTTP/1.1 301 Moved Permanently
-cache-control: no-cache, no-store, must-revalidate
-location: https://stackoverflow.com/questions
-x-request-guid: c5b3380e-d88d-4645-b897-3c62e95e670e
-feature-policy: microphone 'none'; speaker 'none'
-content-security-policy: upgrade-insecure-requests; frame-ancestors 'self' https://stackexchange.com
-Accept-Ranges: bytes
-Date: Sun, 28 Nov 2021 08:57:05 GMT
-Via: 1.1 varnish
-Connection: close
-X-Served-By: cache-hhn4028-HHN
-X-Cache: MISS
-X-Cache-Hits: 0
-X-Timer: S1638089826.527000,VS0,VE184
-Vary: Fastly-SSL
-X-DNS-Prefetch-Control: off
-Set-Cookie: prov=d05f6af6-dbbc-91f8-7072-bce9cd5aa692; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly
+vagrant@vagrant:~$ telnet stackoverflow.com 80
+Trying 151.101.65.69...
+Connected to stackoverflow.com.
+Escape character is '^]'.
+GET /questions HTTP/1.0
+HOST: stackoverflow.com
 
-1. те разрешения для сайта которые имеються
-2. данные о времнеи получения
+HTTP/1.1 301 
+стандартный код ответа HTTP, получаемый в ответ от сервера в ситуации, когда запрошенный ресурс был на постоянной основе перемещён в новое месторасположение, и указывающий на то, что текущие ссылки, использующие данный URL, должны быть обновлены. Адрес нового месторасположения ресурса указывается в поле Location получаемого в ответ заголовка пакета протокола HTTP.
+
 ### 2) 
+
+Status Code: 200 
+успешный запрос. Если клиентом были запрошены какие-либо данные, то они находятся в заголовке и/или теле сообщения. Появился в HTTP/1.0.
 https://ibb.co/SNPLTn4
 ### 3) 
 77.222.121.62
