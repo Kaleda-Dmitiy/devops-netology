@@ -1,5 +1,6 @@
 # devops-netology_Dmitriy-Kaleda
 ## МЕНЮ
+##  [Домашнее задание к занятию "4.2. Использование Python для решения типовых DevOps задач"](https://github.com/Kaleda-Dmitiy/devops-netology/blob/main/4_2.md)
 ##  [Домашнее задание к занятию "4.1. Командная оболочка Bash: Практические навыки"](https://github.com/Kaleda-Dmitiy/devops-netology/blob/main/4_1.md)
 ##
 ##  [Домашнее задание к занятию "3.8. Компьютерные сети, лекция 3"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-38-компьютерные-сети-лекция-3)
