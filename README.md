@@ -1,6 +1,6 @@
 # devops-netology_Dmitriy-Kaleda
 ## МЕНЮ
-## Курсовая работа по итогам модуля "DevOps и системное администрирование"
+##  [Курсовая работа по итогам модуля "DevOps и системное администрирование"](https://github.com/Kaleda-Dmitiy/devops-netology#курсовая-работа-по-итогам-модуля-devops-и-системное-администрирование-1)
 ##  [Домашнее задание к занятию "4.2. Использование Python для решения типовых DevOps задач"](https://github.com/Kaleda-Dmitiy/devops-netology/blob/main/4_2.md)
 ##  [Домашнее задание к занятию "4.1. Командная оболочка Bash: Практические навыки"](https://github.com/Kaleda-Dmitiy/devops-netology/blob/main/4_1.md)
 ##
