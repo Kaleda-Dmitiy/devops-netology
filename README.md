@@ -3,7 +3,7 @@
 <details>
 <summary>МЕНЮ</summary> 
 
-##  Домашнее задание к занятию "6.3. mySQL"
+##  [Домашнее задание к занятию "6.3. mySQL"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-63-mysql-1)
 ##  [Домашнее задание к занятию "6.2. SQL"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-62-sql-1)
 ##  [Домашнее задание к занятию "5.4. Оркестрация группой Docker контейнеров на примере Docker Compose"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-54-оркестрация-группой-docker-контейнеров-на-примере-docker-compose-1)
 ##  [Домашнее задание к занятию "5.2. Применение принципов IaaC в работе с виртуальными машинами"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-52-применение-принципов-iaac-в-работе-с-виртуальными-машинами)
@@ -23,7 +23,8 @@
 </details>
 
 ## Домашнее задание к занятию "6.3. mySQL"
-
+<details>
+<summary>Htitybt</summary> 
 Используя docker поднимите инстанс MySQL (версию 8). Данные БД сохраните в volume.
 
 Ответ:
@@ -40,8 +41,9 @@ vol_mysql
 20:55:29 oragons@upc(0):~$ docker run --rm --name mysql-docker -e MYSQL_ROOT_PASSWORD=mysql -ti -p 3306:3306 -v vol_mysql:/etc/mysql/ mysql:8.0
 ...
 
-
+```
 Статус БД:
+```
 mysql> \s
 --------------
 mysql  Ver 8.0.23 for Linux on x86_64 (MySQL Community Server - GPL)
@@ -68,8 +70,9 @@ Threads: 2  Questions: 57  Slow queries: 0  Opens: 162  Flush tables: 3  Open ta
 --------------
 
 mysql> 
-
+```
 Данные БД:
+```
 mysql> use temp_db;
 ERROR 1049 (42000): Unknown database 'temp_db'
 mysql> use test_db;
@@ -196,6 +199,7 @@ key_buffer_size = 640М
 #Set log size
 max_binlog_size	= 100M
 ```
+</details>
 
 ## Домашнее задание к занятию "6.2. SQL"
 <details>
