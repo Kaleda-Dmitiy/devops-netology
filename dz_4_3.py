@@ -9,8 +9,8 @@ i     = 1
 wait  = 2 # интервал проверок в секундах
 srv   = {'drive.google.com':'0.0.0.0', 'mail.google.com':'0.0.0.0', 'google.com':'0.0.0.0'}
 init  = 0
-fpath = "/home/alex/python/" #путь к файлам конфигов
-flog  = "/home/alex/python/error.log" #путь к файлам логов
+fpath = "/home/oragons/python/" #путь к файлам конфигов
+flog  = "/home/oragons/python/error.log" #путь к файлам логов
 
 # start script workflow
 print('*** start script ***')
