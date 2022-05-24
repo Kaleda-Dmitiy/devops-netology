@@ -27,15 +27,21 @@
 Используя docker поднимите инстанс PostgreSQL (версию 12) c 2 volume, в который будут складываться данные БД и бэкапы.
 
 Ответ:
-
+```
 12:17:28 oragons@upc(0):~$ docker pull postgres:12
-13:00:03 oragons@upc(0):~$ docker volume create vol2
-vol2
-13:00:15 oragons@upc(0):~$ docker volume create vol1
-vol1
-13:00:03 oragons@upc(0):~$ docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -ti -p 5432:5432 -v vol1:/var/lib/postgresql/data -v vol2:/var/lib/postgresql postgres:12
-13:00:35 oragons@upc(0):~$ docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -ti -p 5432:5432 -v vol1:/var/lib/postgresql/data -v vol2:/var/lib/postgresql postgres:12
 
+13:00:03 oragons@upc(0):~$ docker volume create vol2
+
+vol2
+
+13:00:15 oragons@upc(0):~$ docker volume create vol1
+
+vol1
+
+13:00:03 oragons@upc(0):~$ docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -ti -p 5432:5432 -v vol1:/var/lib/postgresql/data -v vol2:/var/lib/postgresql postgres:12
+
+13:00:35 oragons@upc(0):~$ docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -ti -p 5432:5432 -v vol1:/var/lib/postgresql/data -v vol2:/var/lib/postgresql postgres:12
+```
 ![](pic/ss_6_1.png)
 
 В БД из задачи 1:
