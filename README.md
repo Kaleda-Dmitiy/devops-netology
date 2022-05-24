@@ -24,7 +24,7 @@
 
 ## Домашнее задание к занятию "6.3. mySQL"
 <details>
-<summary>Htitybt</summary> 
+<summary>Решение</summary> 
 Используя docker поднимите инстанс MySQL (версию 8). Данные БД сохраните в volume.
 
 Ответ:
