@@ -27,6 +27,7 @@
 Используя docker поднимите инстанс PostgreSQL (версию 12) c 2 volume, в который будут складываться данные БД и бэкапы.
 
 Ответ:
+
 12:17:28 oragons@upc(0):~$ docker pull postgres:12
 13:00:03 oragons@upc(0):~$ docker volume create vol2
 vol2
@@ -34,9 +35,11 @@ vol2
 vol1
 13:00:03 oragons@upc(0):~$ docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -ti -p 5432:5432 -v vol1:/var/lib/postgresql/data -v vol2:/var/lib/postgresql postgres:12
 13:00:35 oragons@upc(0):~$ docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -ti -p 5432:5432 -v vol1:/var/lib/postgresql/data -v vol2:/var/lib/postgresql postgres:12
+
 ![](pic/ss_6_1.png)
+
 В БД из задачи 1:
-```
+
 создайте пользователя test-admin-user и БД test_db
 в БД test_db создайте таблицу orders и clients (спeцификация таблиц ниже)
 предоставьте привилегии на все операции пользователю test-admin-user на таблицы БД test_db
@@ -44,6 +47,7 @@ vol1
 предоставьте пользователю test-simple-user права на SELECT/INSERT/UPDATE/DELETE данных таблиц БД test_db
 Ответ:
 Команды:
+```
 CREATE DATABASE test_db
 CREATE ROLE "test-admin-user" SUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT LOGIN;
 
