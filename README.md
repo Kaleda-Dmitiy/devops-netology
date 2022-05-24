@@ -1,8 +1,9 @@
 # devops-netology_Dmitriy-Kaleda
 
-## <details>
-## <summary>МЕНЮ</summary> 
-##  Домашнее задание к занятию "6.2. SQL"
+<details>
+<summary>МЕНЮ</summary> 
+
+##  [Домашнее задание к занятию "6.2. SQL"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-62-sql-1)
 ##  [Домашнее задание к занятию "5.4. Оркестрация группой Docker контейнеров на примере Docker Compose"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-54-оркестрация-группой-docker-контейнеров-на-примере-docker-compose-1)
 ##  [Домашнее задание к занятию "5.2. Применение принципов IaaC в работе с виртуальными машинами"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-52-применение-принципов-iaac-в-работе-с-виртуальными-машинами)
 ##  [Домашнее задание к занятию "5.1. Введение в виртуализацию. Типы и функции гипервизоров. Обзор рынка вендоров и областей применения."](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-51-введение-в-виртуализацию-типы-и-функции-гипервизоров-обзор-рынка-вендоров-и-областей-применения)
@@ -18,7 +19,7 @@
 ##  [Домашнее задание к занятию "3.2. Работа в терминале, лекция 2"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-32-работа-в-терминале-лекция-2-1)
 ##  [Домашнее задание к занятию "3.1. Работа в терминале, лекция 1"](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-31-работа-в-терминале-лекция-1)
 ##  [Домашнее задание к занятию «2.4. Инструменты Git»](https://github.com/Kaleda-Dmitiy/devops-netology#домашнее-задание-к-занятию-24-инструменты-git)
-## </details>
+</details>
 
 ## Домашнее задание к занятию "6.2. SQL"
 <details>
@@ -108,6 +109,7 @@ update  clients set booking = 4 where id = 2;
 update  clients set booking = 5 where id = 3;
 
 Запрос получения Вариант1 -  учитывает наличие в таблице заказов данных:
+
 select * from clients as c where  exists (select id from orders as o where c.booking = o.id) ;
 Запрос получения Вариант2 - проверяет на непустые значения у клиентов по заказам:
 select * from clients where booking is not null
@@ -170,6 +172,7 @@ GRANT
 ![](pic/ss_6_6_1.png)
 
 </details>
+
 ## Домашнее задание к занятию "5.4. Оркестрация группой Docker контейнеров на примере Docker Compose"
 <details>
 <summary>Решение</summary> 
